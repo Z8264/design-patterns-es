@@ -1,4 +1,4 @@
-const Singleton = require('../Singleton.static');
+import Singleton from './Singleton.static';
 
 test('Singleton', () => {
   const a = Singleton.create('1');

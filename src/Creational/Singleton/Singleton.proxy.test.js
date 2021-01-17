@@ -1,4 +1,4 @@
-const Singleton = require('../Singleton.constructor');
+import Singleton from './Singleton.proxy';
 
 test('Singleton', () => {
   const a = new Singleton('1');

@@ -3,7 +3,6 @@ class Instance {
     this.name = name;
   }
 }
-
 class Singleton {
   constructor(name) {
     if (!Singleton.instance) {
@@ -13,4 +12,4 @@ class Singleton {
   }
 }
 
-module.exports = Singleton;
+export default Singleton;
