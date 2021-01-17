@@ -2,6 +2,9 @@
 
 # Design Patterns
 
+
+![Design Patterns](./design-patterns.svg)
+
 设计模式
 
 ## Creational Patterns
@@ -23,6 +26,7 @@
 * Prototype
   * 原型模式
   * 创建重复的对象  
+  
 ##  Structural Patterns
 
 结构模式
@@ -37,6 +41,13 @@
 | Flyweight | 享元   |      |
 | Proxy     | 代理   |      |
 
+* Adapter  
+* Bridge   
+* Composite
+* Decorator
+* Facade   
+* Flyweight 
+* Proxy    
 ##  Behavioral Patterns
 
 行为模式
@@ -54,3 +65,15 @@
 | Strategy                | 策略     | 定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换。 |
 | Template Method         | 模板方法 |                                                                  |
 | Visitor                 | 访问者   |                                                                  |
+
+* Chain Of Responsibility
+* Command
+* Interpreter
+* Iterator
+* Mediator
+* Memento
+* Observer
+* State
+* Strategy
+* Template Method
+* Visitor

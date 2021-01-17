@@ -1,4 +1,4 @@
-const Strategy = require('../Strategy');
+import Strategy from './Strategy';
 
 test('Strategy', () => {
   const s = new Strategy(3, 4);

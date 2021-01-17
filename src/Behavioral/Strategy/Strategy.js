@@ -1,6 +1,3 @@
-/**
- * 可以相互替换的算法集合
- */
 const METHODS = {
   addition: (a, b) => a + b,
   subtraction: (a, b) => a - b,
@@ -10,9 +7,6 @@ const METHODS = {
   min: (a, b) => ((a < b) ? a : b),
 };
 
-/**
- * 定一个可以应用不同策略类
- */
 class Strategy {
   constructor(a, b) {
     this.a = a;
@@ -24,4 +18,4 @@ class Strategy {
   }
 }
 
-module.exports = Strategy;
+export default Strategy;
