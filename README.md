@@ -52,19 +52,19 @@
 
 行为模式
 
-| Patterns                | 模式     |                                                                  |
-| :---------------------- | :------- | :--------------------------------------------------------------- |
-| Chain Of Responsibility | 职责链   |                                                                  |
-| Command                 | 命令     |                                                                  |
-| Interpreter             | 解释器   |                                                                  |
-| Iterator                | 迭代器   |                                                                  |
-| Mediator                | 中介者   |                                                                  |
-| Memento                 | 备忘录   |                                                                  |
-| Observer                | 观察者   |                                                                  |
-| State                   | 状态     |                                                                  |
-| Strategy                | 策略     | 定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换。 |
-| Template Method         | 模板方法 |                                                                  |
-| Visitor                 | 访问者   |                                                                  |
+| Patterns                | 模式     |                                                                          |
+| :---------------------- | :------- | :----------------------------------------------------------------------- |
+| Chain Of Responsibility | 职责链   |                                                                          |
+| Command                 | 命令     | done                                                                     |
+| Interpreter             | 解释器   |                                                                          |
+| Iterator                | 迭代器   | 提供一种方法顺序访问一个聚合对象中各个元素, 而又无须暴露该对象的内部表示 |
+| Mediator                | 中介者   |                                                                          |
+| Memento                 | 备忘录   |                                                                          |
+| Observer                | 观察者   |                                                                          |
+| State                   | 状态     |                                                                          |
+| Strategy                | 策略     | 定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换。         |
+| Template Method         | 模板方法 |                                                                          |
+| Visitor                 | 访问者   |                                                                          |
 
 * Chain Of Responsibility
 * Command
