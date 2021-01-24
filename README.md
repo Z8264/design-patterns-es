@@ -11,7 +11,7 @@
 
 创建模式
 
-* Singleton 
+* Singleton: ensure a class has only one instance
   * 单例模式
   * 保证一个类仅有一个实例
 * Factory Method
@@ -47,7 +47,7 @@
 * Decorator
 * Facade   
 * Flyweight 
-* Proxy    
+* Proxy 
 ##  Behavioral Patterns
 
 行为模式

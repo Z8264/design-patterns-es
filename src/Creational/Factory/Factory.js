@@ -17,8 +17,8 @@ class C {
 }
 
 class Factory {
-  static create(character) {
-    switch (character.toUpperCase()) {
+  static create(product) {
+    switch (product.toUpperCase()) {
       case 'A': return new A();
       case 'B': return new B();
       case 'C': return new C();
