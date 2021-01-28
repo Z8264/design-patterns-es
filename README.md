@@ -2,78 +2,34 @@
 
 # Design Patterns
 
-
 ![Design Patterns](./design-patterns.svg)
+## 创建模式 Creational Patterns
 
-设计模式
-
-## Creational Patterns
-
-创建模式
-
-* Singleton: ensure a class has only one instance
-  * 单例模式
-  * 保证一个类仅有一个实例
-* Factory Method
-  * 工厂模式
-  * 让其子类自己决定实例化哪一个工厂类       
-* Abstract Factory
-  * 抽象工厂模式
-  * 创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类
-* Builder
-  * 建造者模式
-  * 使用多个简单的对象一步一步构建成一个复杂的对象
-* Prototype
-  * 原型模式
-  * 创建重复的对象  
+* 单例模式 Singleton [ˈsɪŋɡltən] 保证一个类仅有一个实例。
+* 工厂模式 Factory  [ˈfæktri] 让其子类自己决定实例化哪一个工厂类。 
+* 抽象工厂模式 Abstract Factory [ˈæbstrækt ˈfæktri] 创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。
+* 建造者模式 Builder [ˈbɪldə(r)] 使用多个简单的对象一步一步构建成一个复杂的对象。
+* 原型模式 Prototype [ˈprəʊtətaɪp] 用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。
   
-##  Structural Patterns
+## 结构模式 Structural Patterns
 
-结构模式
+* 适配器模式 Adapter  
+* 桥接模式 Bridge   
+* 组合模式 Composite
+* 装饰模式 Decorator
+* 外观模式 Facade   
+* 享元模式 Flyweight 
+* 代理模式 Proxy 
+## 行为模式 Behavioral Patterns
 
-| Patterns  | 模式   | 描述 |
-| :-------- | :----- | :--- |
-| Adapter   | 适配器 |      |
-| Bridge    | 桥接   |      |
-| Composite | 组合   |      |
-| Decorator | 装饰   |      |
-| Facade    | 外观   |      |
-| Flyweight | 享元   |      |
-| Proxy     | 代理   |      |
-
-* Adapter  
-* Bridge   
-* Composite
-* Decorator
-* Facade   
-* Flyweight 
-* Proxy 
-##  Behavioral Patterns
-
-行为模式
-
-| Patterns                | 模式     |                                                                          |
-| :---------------------- | :------- | :----------------------------------------------------------------------- |
-| Chain Of Responsibility | 职责链   |                                                                          |
-| Command                 | 命令     | done                                                                     |
-| Interpreter             | 解释器   |                                                                          |
-| Iterator                | 迭代器   | 提供一种方法顺序访问一个聚合对象中各个元素, 而又无须暴露该对象的内部表示 |
-| Mediator                | 中介者   |                                                                          |
-| Memento                 | 备忘录   |                                                                          |
-| Observer                | 观察者   |                                                                          |
-| State                   | 状态     |                                                                          |
-| Strategy                | 策略     | 定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换。         |
-| Template Method         | 模板方法 |                                                                          |
-| Visitor                 | 访问者   |                                                                          |
-
-* Chain Of Responsibility
-* Command
-* Interpreter
-* Iterator
-* Mediator
-* Memento
-* Observer
-* State
-* Strategy
-* Template Method
-* Visitor
+* 职责链模式 Chain Of Responsibility
+* 命令模式 Command
+* 解释器模式 Interpreter
+* 迭代器模式 Iterator [ɪtə'reɪtə] 迭代器模式：提供一种方法顺序访问一个聚合对象中各个元素, 而又无须暴露该对象的内部表示。
+* 中介者模式 Mediator [ˈmiːdieɪtə(r)] 提供了一个中介类处理不同类之间的通信，从而使其耦合松散。
+* 备忘录模式 Memento [məˈmentəʊ] 保存一个对象的某个状态，以便在适当的时候恢复对象。
+* 观察者模式 Observer
+* 状态模式 State  [steɪt] 允许对象在内部状态发生改变时改变它的行为。
+* 策略模式 Strategy [ˈstrætədʒi] 定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换。  
+* 模板模式 Template [ˈtempleɪt] 一个抽象类公开定义了执行它的方法的方式/模板。它的子类可以按需要重写方法实现，但调用将以抽象类中定义的方式进行。     
+* 访问者模式 Visitor

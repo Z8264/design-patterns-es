@@ -13,7 +13,7 @@ class Strategy {
     this.b = b;
   }
 
-  calculate(method) {
+  execute(method) {
     return METHODS[method](this.a, this.b);
   }
 }
