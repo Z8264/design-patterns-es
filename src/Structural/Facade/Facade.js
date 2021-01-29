@@ -1,17 +1,17 @@
 class A {
-  getName() {
+  execute() {
     return 'A';
   }
 }
 
 class B {
-  getName() {
+  execute() {
     return 'B';
   }
 }
 
 class C {
-  getName() {
+  execute() {
     return 'C';
   }
 }
@@ -23,16 +23,16 @@ class Facade {
     this.c = new C();
   }
 
-  getNameA() {
-    return this.a.getName();
+  executeA() {
+    return this.a.execute();
   }
 
-  getNameB() {
-    return this.b.getName();
+  executeB() {
+    return this.b.execute();
   }
 
-  getNameC() {
-    return this.c.getName();
+  executeC() {
+    return this.c.execute();
   }
 }
 

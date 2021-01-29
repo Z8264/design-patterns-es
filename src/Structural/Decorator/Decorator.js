@@ -1,30 +1,16 @@
-class Shape {
-  constructor() {
-    this.name = '';
+class Original {
+  constructor(value) {
+    this.value = value;
   }
 
-  draw() {}
-}
-
-class Circle extends Shape {
-  constructor() {
-    super();
-  }
-
-  draw() {
-    return 'Circle';
-  }
-}
-class Rectangle {
-  draw() {
-    return 'Rectangle';
+  execute() {
+    return this.value;
   }
 }
 
-class ShapDecorator {
-  constructor() {
-    super();
-    this.num = 1;
+class Decorator extends Original {
+  superExecute() {
+    return this.value * 2;
   }
 }
 
