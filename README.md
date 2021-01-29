@@ -22,9 +22,9 @@
 * 代理模式 Proxy 
 ## 行为模式 Behavioral Patterns
 
-* 职责链模式 Chain Of Responsibility [tʃeɪn] [əv] [rɪˌspɒnsəˈbɪləti]
+* 职责链模式 Chain Of Responsibility [tʃeɪn] [əv] [rɪˌspɒnsəˈbɪləti] 将多个对象连接成一条链，沿着这条链传递请求，并处理该请求。
 * 命令模式 Command [kəˈmɑːnd] 将一个请求封装成一个对象，从而使您可以用不同的请求对客户进行参数化。
-* 解释器模式 Interpreter [ɪnˈtɜːprətə(r)]
+* 解释器模式 Interpreter [ɪnˈtɜːprətə(r)] 实现了一个表达式接口，该接口解释一个特定的上下文。
 * 迭代器模式 Iterator [ɪtə'reɪtə] 提供一种方法顺序访问一个聚合对象中各个元素, 而又无须暴露该对象的内部表示。
 * 中介者模式 Mediator [ˈmiːdieɪtə(r)] 提供了一个中介类处理不同类之间的通信，从而使其耦合松散。
 * 备忘录模式 Memento [məˈmentəʊ] 保存一个对象的某个状态，以便在适当的时候恢复对象。

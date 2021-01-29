@@ -1,4 +1,4 @@
-export class Executor {
+class Executor {
   constructor() {
     this.state = false;
   }
@@ -8,7 +8,7 @@ export class Executor {
   }
 }
 
-export class Command {
+class Command {
   constructor(instance) {
     this.instance = instance;
   }
@@ -18,7 +18,7 @@ export class Command {
   }
 }
 
-export class Commander {
+class Commander {
   constructor(command) {
     this.command = command;
   }
@@ -27,3 +27,5 @@ export class Commander {
     this.command.execute();
   }
 }
+
+export { Executor, Command, Commander };
