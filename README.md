@@ -4,7 +4,6 @@
 
 使用 ES6 实现 23 种经典设计模式 (GoF)。 
 
-
 示例原则：
 
 * 极简 Minimalism [ˈmɪnɪməlɪzəm]
@@ -13,8 +12,10 @@
 
 ![Design Patterns](./design-patterns.svg)
 
+## Detail
 ### 📗 创建模式 Creational Patterns [kri:ˈeiʃənəl] ['pætənz]
 
+创建模式，描述对象如何创建实例，关注类的实例化的过程。
 #### 单例模式 Singleton [ˈsɪŋɡltən] 
 
 保证一个类仅有一个实例。 
@@ -208,6 +209,8 @@ class Prototype {
 
 ### 📘 结构模式 Structural Patterns [ˈstrʌktʃərəl] ['pætənz]
 
+结构模式，描述如何将类或者对象结合在一起形成更大、更复杂的结构，关注类和对象的组合。
+
 #### 适配器模式 Adapter [ə'dæptə] 
 
 将一个类的接口转换成另外一个需要的接口，作为两个不兼容的接口之间的桥梁。 
@@ -383,6 +386,8 @@ class Proxy {
 ```
 
 ### 📙 行为模式 Behavioral Patterns [bi'heivjərəl] ['pætənz]
+
+行为模式，描述如何清晰的划分类与对象的职责，关注对象之间的通信。
 
 #### 职责链模式 Chain Of Responsibility [tʃeɪn] [əv] [rɪˌspɒnsəˈbɪləti] 
 
@@ -719,3 +724,12 @@ class Visitor {
   }
 }
 ```
+
+
+## Support
+
+Please star ⭐️ the repository to show your support!
+
+ ## License
+
+[![License: CC BY-NC-ND 3.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%203.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/3.0/)
