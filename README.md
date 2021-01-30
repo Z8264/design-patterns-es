@@ -210,13 +210,25 @@ class Prototype {
 
 #### 适配器模式 Adapter [ə'dæptə] 
 
-将一个类的接口转换成另外一个需要的接口。 
+将一个类的接口转换成另外一个需要的接口，作为两个不兼容的接口之间的桥梁。 
 
 ``` javascript
-```
-作为两个不兼容的接口之间的桥梁。 
+class Standard {
+  execute() {
+    return false;
+  }
+}
 
-``` javascript
+class Instance {
+  action() {
+    return true;
+  }
+}
+class Adapter {
+  static adapter(instance) {
+    instance.execute = instance.action;
+  }
+}
 ```
 
 #### 桥接模式 Bridge [brɪdʒ] 
@@ -224,6 +236,22 @@ class Prototype {
 将抽象部分与实现部分分离，使它们都可以独立的变化。 
 
 ``` javascript
+class Bridge {
+  execute(value) {
+    return value;
+  }
+}
+
+class Instance {
+  constructor(value, bridge) {
+    this.value = value;
+    this.bridge = bridge;
+  }
+
+  execute() {
+    return this.bridge.execute(this.value);
+  }
+}
 ```
 
 #### 组合模式 Composite [ˈkɒmpəzɪt] 
@@ -231,6 +259,20 @@ class Prototype {
 将对象组合成树形结构以表示"部分-整体"的层次结构。 
 
 ``` javascript
+class Instance {
+  constructor(value) {
+    this.value = value;
+    this.children = [];
+  }
+
+  add(instance) {
+    this.children.push(instance);
+  }
+
+  toString() {
+    return this.value.toString() + this.children.map((child) => child.toString()).join('');
+  }
+}
 ```
 
 #### 装饰模式 Decorator [ˈdekəreɪtə(r)] 
@@ -238,6 +280,21 @@ class Prototype {
 动态添加/覆盖对象现有对象中的行为。 
 
 ``` javascript
+class Original {
+  constructor(value) {
+    this.value = value;
+  }
+
+  execute() {
+    return this.value;
+  }
+}
+
+class Decorator extends Original {
+  superExecute() {
+    return this.value * 2;
+  }
+}
 ```
 
 #### 外观模式 Facade [fəˈsɑːd] 
@@ -245,6 +302,43 @@ class Prototype {
 定义了一个高层接口，这个接口使得这一子系统更加容易使用。 
 
 ``` javascript
+class A {
+  execute() {
+    return 'A';
+  }
+}
+
+class B {
+  execute() {
+    return 'B';
+  }
+}
+
+class C {
+  execute() {
+    return 'C';
+  }
+}
+
+class Facade {
+  constructor() {
+    this.a = new A();
+    this.b = new B();
+    this.c = new C();
+  }
+
+  executeA() {
+    return this.a.execute();
+  }
+
+  executeB() {
+    return this.b.execute();
+  }
+
+  executeC() {
+    return this.c.execute();
+  }
+}
 ```
 
 #### 享元模式 Flyweight [ˈflaɪweɪt] 
@@ -252,6 +346,22 @@ class Prototype {
 运用共享技术有效地支持大量细粒度的对象。 
 
 ``` javascript
+class Flyweight {
+  constructor(value) {
+    this.value = value;
+  }
+}
+
+class Instance {
+  constructor() {
+    this.items = [];
+  }
+
+  create(value) {
+    this.items.push(new Flyweight(value));
+    return this;
+  }
+}
 ```
 
 #### 代理模式 Proxy [ˈprɒksi] 
@@ -259,6 +369,17 @@ class Prototype {
 为其他对象提供一种代理以控制对这个对象的访问。 
 
 ``` javascript
+class Instance {
+  constructor() {
+    this.value = true;
+  }
+}
+
+class Proxy {
+  constructor() {
+    return new Instance();
+  }
+}
 ```
 
 ### 📙 行为模式 Behavioral Patterns [bi'heivjərəl] ['pætənz]
