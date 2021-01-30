@@ -23,7 +23,7 @@ class Factory {
       case 'B': return new B();
       case 'C': return new C();
       default:
-        throw new Error('no character');
+        throw new Error('no class');
     }
   }
 }
