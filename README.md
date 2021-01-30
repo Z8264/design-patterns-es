@@ -389,6 +389,52 @@ class Proxy {
 将多个对象连接成一条链，沿着这条链传递请求，并处理该请求。 
 
 ``` javascript
+class Start {
+  constructor(instance) {
+    this.instance = instance;
+  }
+
+  execute(value) {
+    this.instance.value += value * 1;
+  }
+}
+
+class Process {
+  constructor(instance) {
+    this.instance = instance;
+  }
+
+  execute(value) {
+    this.instance.value += value * 2;
+  }
+}
+
+class End {
+  constructor(instance) {
+    this.instance = instance;
+  }
+
+  execute(value) {
+    this.instance.value += value * 3;
+  }
+}
+
+class Instance {
+  constructor() {
+    this.value = 0;
+    this.chain = [
+      new Start(this),
+      new Process(this),
+      new End(this),
+    ];
+  }
+
+  execute(value) {
+    this.chain.forEach((obj) => {
+      obj.execute(value);
+    });
+  }
+}
 ```
 
 #### 命令模式 Command [kəˈmɑːnd] 
@@ -396,6 +442,35 @@ class Proxy {
 将一个请求封装成一个对象，从而使您可以用不同的请求对实例进行参数化。 
 
 ``` javascript
+class Executor {
+  constructor() {
+    this.state = false;
+  }
+
+  execute() {
+    this.state = true;
+  }
+}
+
+class Command {
+  constructor(instance) {
+    this.instance = instance;
+  }
+
+  execute() {
+    this.instance.execute();
+  }
+}
+
+class Commander {
+  constructor(command) {
+    this.command = command;
+  }
+
+  execute() {
+    this.command.execute();
+  }
+}
 ```
 
 #### 解释器模式 Interpreter [ɪnˈtɜːprətə(r)] 
@@ -403,6 +478,21 @@ class Proxy {
 实现了一个表达式接口，该接口解释一个特定的上下文。 
 
 ``` javascript
+class Interpreter {
+  static execute(commend) {
+    return commend + 1;
+  }
+}
+
+class Command {
+  constructor(commend) {
+    this.commend = commend;
+  }
+
+  execute() {
+    return Interpreter.execute(this.commend);
+  }
+}
 ```
 
 #### 迭代器模式 Iterator [ɪtə'reɪtə] 
@@ -410,6 +500,21 @@ class Proxy {
 提供一种方法顺序访问一个聚合对象中各个元素, 而又无须暴露该对象的内部表示。 
 
 ``` javascript
+class Iterator {
+  constructor(arr) {
+    this.i = 0;
+    this.arr = arr;
+  }
+
+  next() {
+    this.i += 1;
+    return this.arr[this.i];
+  }
+
+  hasNext() {
+    return this.index < this.arr.length;
+  }
+}
 ```
 
 #### 中介者模式 Mediator [ˈmiːdieɪtə(r)] 
@@ -417,6 +522,21 @@ class Proxy {
 提供了一个中介类处理不同类之间的通信，从而使其耦合松散。 
 
 ``` javascript
+class Mediator {
+  static execute(instanceA, instanceB) {
+    instanceA.execute(instanceB.value);
+  }
+}
+
+class Instance {
+  constructor(value) {
+    this.value = value;
+  }
+
+  execute(value) {
+    this.value = value;
+  }
+}
 ```
 
 #### 备忘录模式 Memento [məˈmentəʊ] 
@@ -424,6 +544,33 @@ class Proxy {
 保存一个对象的某个状态，以便在适当的时候恢复对象。 
 
 ``` javascript
+class Memento {
+  constructor() {
+    this.value = '';
+  }
+
+  set(value) {
+    this.value = value;
+  }
+
+  get() {
+    return this.value;
+  }
+}
+
+class Instance {
+  constructor(value) {
+    this.value = value;
+  }
+
+  save(memento) {
+    memento.set(this.value);
+  }
+
+  restore(memento) {
+    this.value = memento.get();
+  }
+}
 ```
 
 #### 观察者模式 Observer [əbˈzɜːvə(r)] 
@@ -431,6 +578,32 @@ class Proxy {
 当一个对象被修改时，则会自动通知依赖它的对象。 
 
 ``` javascript
+class Instance {
+  constructor(value) {
+    this.value = value;
+    this.children = [];
+  }
+
+  add(observer) {
+    this.children.push(observer);
+  }
+
+  execute(value) {
+    this.value = value;
+    this.children.forEach((child) => child.execute(this));
+  }
+}
+
+class Observer {
+  constructor(rate) {
+    this.value = 0;
+    this.rate = rate;
+  }
+
+  execute(instance) {
+    this.value = this.rate * instance.value;
+  }
+}
 ```
 
 #### 状态模式 State [steɪt] 
@@ -438,6 +611,29 @@ class Proxy {
 允许对象在内部状态发生改变时改变它的行为。 
 
 ``` javascript
+class State {
+  constructor(name) {
+    this.name = name;
+  }
+
+  execute() {
+    return this.name;
+  }
+}
+
+class Instance {
+  constructor(state) {
+    this.state = state;
+  }
+
+  change(state) {
+    this.state = state;
+  }
+
+  execute() {
+    return this.state.execute();
+  }
+}
 ```
 
 #### 策略模式 Strategy [ˈstrætədʒi]
@@ -445,6 +641,25 @@ class Proxy {
 定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换。 
 
 ``` javascript
+const METHODS = {
+  addition: (a, b) => a + b,
+  subtraction: (a, b) => a - b,
+  multiplication: (a, b) => a * b,
+  division: (a, b) => a / b,
+  max: (a, b) => (a > b ? a : b),
+  min: (a, b) => ((a < b) ? a : b),
+};
+
+class Strategy {
+  constructor(a, b) {
+    this.a = a;
+    this.b = b;
+  }
+
+  execute(method) {
+    return METHODS[method](this.a, this.b);
+  }
+}
 ```
 
 #### 模板模式 Template [ˈtempleɪt] 
@@ -452,6 +667,31 @@ class Proxy {
 定义一个抽象类实现方法的框架，从而允许其子类实现具体的行为。 
 
 ``` javascript
+class Template {
+  start() {}
+
+  end() {}
+
+  execute() {
+    return this.start() + this.end();
+  }
+}
+
+class Instance extends Template {
+  constructor(a, b) {
+    super();
+    this.a = a;
+    this.b = b;
+  }
+
+  start() {
+    return this.a;
+  }
+
+  end() {
+    return this.b;
+  }
+}
 ```
 
 #### 访问者模式 Visitor [ˈvɪzɪtə(r)] 
@@ -459,4 +699,23 @@ class Proxy {
 通过将方法的层次结构移动到一个对象中，将算法与对象结构分离。 
 
 ``` javascript
+class Instance {
+  constructor(value) {
+    this.value = value;
+  }
+
+  execute(visitor) {
+    return visitor.execute(this);
+  }
+}
+
+class Visitor {
+  constructor(rate) {
+    this.rate = rate;
+  }
+
+  execute(instance) {
+    return instance.value * this.rate;
+  }
+}
 ```
