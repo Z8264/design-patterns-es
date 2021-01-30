@@ -2,6 +2,9 @@
 
 # Design Patterns
 
+使用 ES6 实现 23 种经典设计模式 (GoF)。
+
+
 ![Design Patterns](./design-patterns.svg)
 ## 创建模式 Creational Patterns
 
@@ -13,13 +16,13 @@
   
 ## 结构模式 Structural Patterns
 
-* 适配器模式 Adapter [ə'dæptə]
-* 桥接模式 Bridge [brɪdʒ]
+* 适配器模式 Adapter [ə'dæptə] 将一个类的接口转换成另外一个需要的接口。作为两个不兼容的接口之间的桥梁。
+* 桥接模式 Bridge [brɪdʒ] 将抽象部分与实现部分分离，使它们都可以独立的变化。
 * 组合模式 Composite [ˈkɒmpəzɪt] 
 * 装饰模式 Decorator [ˈdekəreɪtə(r)] 动态添加/覆盖对象现有对象中的行为。
 * 外观模式 Facade [fəˈsɑːd] 定义了一个高层接口，这个接口使得这一子系统更加容易使用。
-* 享元模式 Flyweight [ˈflaɪweɪt]
-* 代理模式 Proxy [ˈprɒksi]
+* 享元模式 Flyweight [ˈflaɪweɪt] 运用共享技术有效地支持大量细粒度的对象。
+* 代理模式 Proxy [ˈprɒksi] 为其他对象提供一种代理以控制对这个对象的访问。
 ## 行为模式 Behavioral Patterns
 
 * 职责链模式 Chain Of Responsibility [tʃeɪn] [əv] [rɪˌspɒnsəˈbɪləti] 将多个对象连接成一条链，沿着这条链传递请求，并处理该请求。

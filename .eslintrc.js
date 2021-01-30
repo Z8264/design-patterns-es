@@ -12,5 +12,6 @@ module.exports = {
     'no-console': process.env.NODE_ENV !== 'production' ? 0 : 2,
     'max-classes-per-file': 0,
     'class-methods-use-this': 0,
+    'no-param-reassign': 0,
   },
 };
