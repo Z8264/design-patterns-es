@@ -1,27 +1,27 @@
 
 
-# Design Patterns in ECMAScript
+# 设计模式 Design Patterns in ECMAScript [dɪˈzaɪn] ['pætənz]
 
-English | [Chinese](./README-CN.md)
+[En](./README.md) | 中文
 
-Design patterns (GoF) implemented in ECMAScript.
+使用 ECMAScript 实现 23 种经典设计模式 (GoF)。 
 
-Code sample principles:
+代码示例原则：
 
-* Minimalism
-* Abstract
+* 极简 Minimalism [ˈmɪnɪməlɪzəm]
+* 抽象 Abstract [ˈæbstrækt]
 
-## Guide
+## 预览
 
 ![Design Patterns](./design-patterns.svg)
 
-## Detail
-### 📗 Creational Patterns 
+## 详情
+### 📗 创建模式 Creational Patterns [kri:ˈeiʃənəl] ['pætənz]
 
-Creational patterns that describe how objects are instantiated and focus on the instantiation of classes.
-#### 🟢 Singleton
+创建模式，描述对象如何创建实例，关注类的实例化过程。
+#### 🟢 单例模式 Singleton [ˈsɪŋɡltən] 
 
-> Ensure a class has only one instance.
+保证一个类仅有一个实例。 
 
 ``` javascript
 // static
@@ -69,9 +69,9 @@ class Singleton {
 }
 ```
 
-#### 🟢 Factory
+#### 🟢 工厂模式 Factory [ˈfæktri] 
 
-> Factory Method lets a class defer instantiation to subclasses.
+让其子类自己决定实例化哪一个工厂类。 
 
 ``` javascript
 class A {
@@ -105,9 +105,9 @@ class Factory {
 }
 ```
 
-#### 🟢 Abstract Factory
+#### 🟢 抽象工厂模式 Abstract Factory [ˈæbstrækt] [ˈfæktri] 
 
-> Provide an interface for creating families of related or dependent objects without specifying their concrete classes. 
+创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。 
 
 ``` javascript
 class A1 {
@@ -169,9 +169,9 @@ class AbstractFactory {
 }
 ```
 
-#### 🟢 Builder
+#### 🟢 建造者模式 Builder [ˈbɪldə(r)] 
 
-> Using multiple simple objects to build a complex object step by step.
+使用多个简单的对象一步一步构建成一个复杂的对象。 
 
 ``` javascript
 class A {
@@ -194,9 +194,9 @@ class Builder {
 }
 ```
 
-#### 🟢 Prototype
+#### 🟢 原型模式 Prototype [ˈprəʊtətaɪp] 
 
-> Specify the kinds of objects to create using a prototypical instance, and create new objects from the 'skeleton' of an existing object.
+用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。 
 
 ``` javascript
 class Prototype {
@@ -210,12 +210,13 @@ class Prototype {
 }
 ```
 
-### 📘 Structural Patterns
+### 📘 结构模式 Structural Patterns [ˈstrʌktʃərəl] ['pætənz]
 
-Structural patterns which describe how classes or objects can be combined to build larger, more complex structures, focus on combinations of classes and objects.
-#### 🔵 Adapter
+结构模式，描述如何将类或者对象结合在一起形成更大、更复杂的结构，关注类和对象的组合。
 
-> Allows classes with incompatible interfaces to work together by wrapping its own interface around that of an already existing class. 
+#### 🔵 适配器模式 Adapter [ə'dæptə] 
+
+将一个类的接口转换成另外一个需要的接口，作为两个不兼容的接口之间的桥梁。 
 
 ``` javascript
 class Standard {
@@ -236,9 +237,9 @@ class Adapter {
 }
 ```
 
-#### 🔵 Bridge
+#### 🔵 桥接模式 Bridge [brɪdʒ] 
 
-> Decouples an abstraction from its implementation so that the two can vary independently. 
+将抽象部分与实现部分分离，使它们都可以独立的变化。 
 
 ``` javascript
 class Bridge {
@@ -259,9 +260,9 @@ class Instance {
 }
 ```
 
-#### 🔵 Composite
+#### 🔵 组合模式 Composite [ˈkɒmpəzɪt] 
 
-> Objects are grouped into a tree structure to represent a part-whole hierarchy.
+将对象组合成树形结构以表示"部分-整体"的层次结构。 
 
 ``` javascript
 class Instance {
@@ -280,9 +281,9 @@ class Instance {
 }
 ```
 
-#### 🔵 Decorator
+#### 🔵 装饰模式 Decorator [ˈdekəreɪtə(r)] 
 
-> Dynamically adds/overrides behaviour in an existing method of an object.
+动态添加/覆盖对象现有对象中的行为。 
 
 ``` javascript
 class Original {
@@ -302,9 +303,9 @@ class Decorator extends Original {
 }
 ```
 
-#### 🔵 Facade
+#### 🔵 外观模式 Facade [fəˈsɑːd] 
 
-> Provides a simplified interface to a large body of code. 
+定义了一个高层接口，这个接口使得这一子系统更加容易使用。 
 
 ``` javascript
 class A {
@@ -346,9 +347,9 @@ class Facade {
 }
 ```
 
-#### 🔵 Flyweight
+#### 🔵 享元模式 Flyweight [ˈflaɪweɪt] 
 
-> Reduces the cost of creating and manipulating a large number of similar objects. 
+运用共享技术有效地支持大量细粒度的对象。 
 
 ``` javascript
 class Flyweight {
@@ -369,9 +370,9 @@ class Instance {
 }
 ```
 
-#### 🔵 Proxy
+#### 🔵 代理模式 Proxy [ˈprɒksi] 
 
-> Provides a placeholder for another object to control access, reduce cost, and reduce complexity. 
+为其他对象提供一种代理以控制对这个对象的访问。 
 
 ``` javascript
 class Instance {
@@ -387,13 +388,13 @@ class Proxy {
 }
 ```
 
-### 📙 Behavioral Patterns
+### 📙 行为模式 Behavioral Patterns [bi'heivjərəl] ['pætənz]
 
-Behavioral patterns that describe how to clearly divide the responsibilities of classes and objects and focus on communication between objects.
+行为模式，描述如何清晰的划分类与对象的职责，关注对象之间的通信。
 
-#### 🟠 Chain Of Responsibility
+#### 🟠 职责链模式 Chain Of Responsibility [tʃeɪn] [əv] [rɪˌspɒnsəˈbɪləti] 
 
-> Delegates commands to a chain of processing objects. 
+将多个对象连接成一条链，沿着这条链传递请求，并处理该请求。 
 
 ``` javascript
 class Start {
@@ -444,9 +445,9 @@ class Instance {
 }
 ```
 
-#### 🟠 Command
+#### 🟠 命令模式 Command [kəˈmɑːnd] 
 
-> Creates objects which encapsulate actions and parameters. 
+将一个请求封装成一个对象，从而使您可以用不同的请求对实例进行参数化。 
 
 ``` javascript
 class Executor {
@@ -480,9 +481,9 @@ class Commander {
 }
 ```
 
-#### 🟠 Interpreter
+#### 🟠 解释器模式 Interpreter [ɪnˈtɜːprətə(r)] 
 
-> Implements a specialized language. 
+实现了一个表达式接口，该接口解释一个特定的上下文。 
 
 ``` javascript
 class Interpreter {
@@ -502,9 +503,9 @@ class Command {
 }
 ```
 
-#### 🟠 Iterator
+#### 🟠 迭代器模式 Iterator [ɪtə'reɪtə] 
 
-> Accesses the elements of an object sequentially without exposing its underlying representation.
+提供一种方法顺序访问一个聚合对象中各个元素, 而又无须暴露该对象的内部表示。 
 
 ``` javascript
 class Iterator {
@@ -524,9 +525,9 @@ class Iterator {
 }
 ```
 
-#### 🟠 Mediator
+#### 🟠 中介者模式 Mediator [ˈmiːdieɪtə(r)] 
 
-> Allows loose coupling between classes by being the only class that has detailed knowledge of their methods. 
+提供了一个中介类处理不同类之间的通信，从而使其耦合松散。 
 
 ``` javascript
 class Mediator {
@@ -546,9 +547,9 @@ class Instance {
 }
 ```
 
-#### 🟠 Memento
+#### 🟠 备忘录模式 Memento [məˈmentəʊ] 
 
-> Provides the ability to restore an object to its previous state. 
+保存一个对象的某个状态，以便在适当的时候恢复对象。 
 
 ``` javascript
 class Memento {
@@ -580,9 +581,9 @@ class Instance {
 }
 ```
 
-#### 🟠 Observer
+#### 🟠 观察者模式 Observer [əbˈzɜːvə(r)] 
 
-> A publish/subscribe pattern which allows a number of observer objects to see an event.
+当一个对象被修改时，则会自动通知依赖它的对象。 
 
 ``` javascript
 class Instance {
@@ -613,9 +614,9 @@ class Observer {
 }
 ```
 
-#### 🟠 State
+#### 🟠 状态模式 State [steɪt] 
 
-> Allows an object to alter its behavior when its internal state changes. 
+允许对象在内部状态发生改变时改变它的行为。 
 
 ``` javascript
 class State {
@@ -643,9 +644,9 @@ class Instance {
 }
 ```
 
-#### 🟠 Strategy
+#### 🟠 策略模式 Strategy [ˈstrætədʒi]
 
-> Allows one of a family of algorithms to be selected on-the-fly at runtime.
+定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换。 
 
 ``` javascript
 const METHODS = {
@@ -669,9 +670,9 @@ class Strategy {
 }
 ```
 
-#### 🟠 Template
+#### 🟠 模板模式 Template [ˈtempleɪt] 
 
-> Method defines the skeleton of an algorithm as an abstract class, allowing its subclasses to provide concrete behavior. 
+定义一个抽象类实现方法的框架，从而允许其子类实现具体的行为。 
 
 ``` javascript
 class Template {
@@ -701,9 +702,9 @@ class Instance extends Template {
 }
 ```
 
-#### 🟠 Visitor
+#### 🟠 访问者模式 Visitor [ˈvɪzɪtə(r)] 
 
-> Separates an algorithm from an object structure by moving the hierarchy of methods into one object. 
+通过将方法的层次结构移动到一个对象中，将算法与对象结构分离。 
 
 ``` javascript
 class Instance {
