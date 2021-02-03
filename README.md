@@ -19,7 +19,7 @@ Code sample principles:
 ### 📗 Creational Patterns 
 
 Creational patterns that describe how objects are instantiated and focus on the instantiation of classes.
-#### 🟢 Singleton
+#### 💚 Singleton
 
 > Ensure a class has only one instance.
 
@@ -69,7 +69,7 @@ class Singleton {
 }
 ```
 
-#### 🟢 Factory
+#### 💚 Factory
 
 > Factory Method lets a class defer instantiation to subclasses.
 
@@ -105,7 +105,7 @@ class Factory {
 }
 ```
 
-#### 🟢 Abstract Factory
+#### 💚 Abstract Factory
 
 > Provide an interface for creating families of related or dependent objects without specifying their concrete classes. 
 
@@ -169,7 +169,7 @@ class AbstractFactory {
 }
 ```
 
-#### 🟢 Builder
+#### 💚 Builder
 
 > Using multiple simple objects to build a complex object step by step.
 
@@ -194,7 +194,7 @@ class Builder {
 }
 ```
 
-#### 🟢 Prototype
+#### 💚 Prototype
 
 > Specify the kinds of objects to create using a prototypical instance, and create new objects from the 'skeleton' of an existing object.
 
@@ -213,7 +213,7 @@ class Prototype {
 ### 📘 Structural Patterns
 
 Structural patterns which describe how classes or objects can be combined to build larger, more complex structures, focus on combinations of classes and objects.
-#### 🔵 Adapter
+#### 💙 Adapter
 
 > Allows classes with incompatible interfaces to work together by wrapping its own interface around that of an already existing class. 
 
@@ -236,7 +236,7 @@ class Adapter {
 }
 ```
 
-#### 🔵 Bridge
+#### 💙 Bridge
 
 > Decouples an abstraction from its implementation so that the two can vary independently. 
 
@@ -259,7 +259,7 @@ class Instance {
 }
 ```
 
-#### 🔵 Composite
+#### 💙 Composite
 
 > Objects are grouped into a tree structure to represent a part-whole hierarchy.
 
@@ -280,7 +280,7 @@ class Instance {
 }
 ```
 
-#### 🔵 Decorator
+#### 💙 Decorator
 
 > Dynamically adds/overrides behaviour in an existing method of an object.
 
@@ -302,7 +302,7 @@ class Decorator extends Original {
 }
 ```
 
-#### 🔵 Facade
+#### 💙 Facade
 
 > Provides a simplified interface to a large body of code. 
 
@@ -346,7 +346,7 @@ class Facade {
 }
 ```
 
-#### 🔵 Flyweight
+#### 💙 Flyweight
 
 > Reduces the cost of creating and manipulating a large number of similar objects. 
 
@@ -369,7 +369,7 @@ class Instance {
 }
 ```
 
-#### 🔵 Proxy
+#### 💙 Proxy
 
 > Provides a placeholder for another object to control access, reduce cost, and reduce complexity. 
 
@@ -391,7 +391,7 @@ class Proxy {
 
 Behavioral patterns that describe how to clearly divide the responsibilities of classes and objects and focus on communication between objects.
 
-#### 🟠 Chain Of Responsibility
+#### 💛 Chain Of Responsibility
 
 > Delegates commands to a chain of processing objects. 
 
@@ -444,7 +444,7 @@ class Instance {
 }
 ```
 
-#### 🟠 Command
+#### 💛 Command
 
 > Creates objects which encapsulate actions and parameters. 
 
@@ -480,7 +480,7 @@ class Commander {
 }
 ```
 
-#### 🟠 Interpreter
+#### 💛 Interpreter
 
 > Implements a specialized language. 
 
@@ -502,7 +502,7 @@ class Command {
 }
 ```
 
-#### 🟠 Iterator
+#### 💛 Iterator
 
 > Accesses the elements of an object sequentially without exposing its underlying representation.
 
@@ -524,7 +524,7 @@ class Iterator {
 }
 ```
 
-#### 🟠 Mediator
+#### 💛 Mediator
 
 > Allows loose coupling between classes by being the only class that has detailed knowledge of their methods. 
 
@@ -546,7 +546,7 @@ class Instance {
 }
 ```
 
-#### 🟠 Memento
+#### 💛 Memento
 
 > Provides the ability to restore an object to its previous state. 
 
@@ -580,7 +580,7 @@ class Instance {
 }
 ```
 
-#### 🟠 Observer
+#### 💛 Observer
 
 > A publish/subscribe pattern which allows a number of observer objects to see an event.
 
@@ -613,7 +613,7 @@ class Observer {
 }
 ```
 
-#### 🟠 State
+#### 💛 State
 
 > Allows an object to alter its behavior when its internal state changes. 
 
@@ -643,7 +643,7 @@ class Instance {
 }
 ```
 
-#### 🟠 Strategy
+#### 💛 Strategy
 
 > Allows one of a family of algorithms to be selected on-the-fly at runtime.
 
@@ -669,7 +669,7 @@ class Strategy {
 }
 ```
 
-#### 🟠 Template
+#### 💛 Template
 
 > Method defines the skeleton of an algorithm as an abstract class, allowing its subclasses to provide concrete behavior. 
 
@@ -701,7 +701,7 @@ class Instance extends Template {
 }
 ```
 
-#### 🟠 Visitor
+#### 💛 Visitor
 
 > Separates an algorithm from an object structure by moving the hierarchy of methods into one object. 
 
@@ -727,7 +727,10 @@ class Visitor {
 }
 ```
 
+## Todo
 
+* Detailed explanation
+* Complex application cases
 ## Support
 
 Please star ⭐️ the repository to show your support!
