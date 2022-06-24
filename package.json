@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/preset-env": "^7.16.11",
-    "eslint": "^8.8.0",
+    "@babel/preset-env": "^7.18.2",
+    "eslint": "^8.18.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "jest": "^27.5.0"
+    "jest": "^28.1.1"
   }
 }

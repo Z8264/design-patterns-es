@@ -1,5 +1,4 @@
 
-
 # Design Patterns in ECMAScript
 
 English | [Chinese](./README-CN.md)
@@ -8,6 +7,7 @@ Design patterns (GoF) implemented in ECMAScript.
 
 Code sample principles:
 
+* ES6
 * Minimalism
 * Abstract
 
@@ -16,9 +16,11 @@ Code sample principles:
 ![Design Patterns](./design-patterns.svg)
 
 ## Detail
-### 📗 Creational Patterns 
+
+### 📗 Creational Patterns
 
 Creational patterns that describe how objects are instantiated and focus on the instantiation of classes.
+
 #### Singleton
 
 > Ensure a class has only one instance.
@@ -107,7 +109,7 @@ class Factory {
 
 #### Abstract Factory
 
-> Provide an interface for creating families of related or dependent objects without specifying their concrete classes. 
+> Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
 
 ``` javascript
 class A1 {
@@ -213,9 +215,10 @@ class Prototype {
 ### 📘 Structural Patterns
 
 Structural patterns which describe how classes or objects can be combined to build larger, more complex structures, focus on combinations of classes and objects.
+
 #### Adapter
 
-> Allows classes with incompatible interfaces to work together by wrapping its own interface around that of an already existing class. 
+> Allows classes with incompatible interfaces to work together by wrapping its own interface around that of an already existing class.
 
 ``` javascript
 class Standard {
@@ -238,7 +241,7 @@ class Adapter {
 
 #### Bridge
 
-> Decouples an abstraction from its implementation so that the two can vary independently. 
+> Decouples an abstraction from its implementation so that the two can vary independently.
 
 ``` javascript
 class Bridge {
@@ -304,7 +307,7 @@ class Decorator extends Original {
 
 #### Facade
 
-> Provides a simplified interface to a large body of code. 
+> Provides a simplified interface to a large body of code.
 
 ``` javascript
 class A {
@@ -348,7 +351,7 @@ class Facade {
 
 #### Flyweight
 
-> Reduces the cost of creating and manipulating a large number of similar objects. 
+> Reduces the cost of creating and manipulating a large number of similar objects.
 
 ``` javascript
 class Flyweight {
@@ -371,7 +374,7 @@ class Instance {
 
 #### Proxy
 
-> Provides a placeholder for another object to control access, reduce cost, and reduce complexity. 
+> Provides a placeholder for another object to control access, reduce cost, and reduce complexity.
 
 ``` javascript
 class Instance {
@@ -393,7 +396,7 @@ Behavioral patterns that describe how to clearly divide the responsibilities of 
 
 #### Chain Of Responsibility
 
-> Delegates commands to a chain of processing objects. 
+> Delegates commands to a chain of processing objects.
 
 ``` javascript
 class Start {
@@ -446,7 +449,7 @@ class Instance {
 
 #### Command
 
-> Creates objects which encapsulate actions and parameters. 
+> Creates objects which encapsulate actions and parameters.
 
 ``` javascript
 class Executor {
@@ -482,7 +485,7 @@ class Commander {
 
 #### Interpreter
 
-> Implements a specialized language. 
+> Implements a specialized language.
 
 ``` javascript
 class Interpreter {
@@ -526,7 +529,7 @@ class Iterator {
 
 #### Mediator
 
-> Allows loose coupling between classes by being the only class that has detailed knowledge of their methods. 
+> Allows loose coupling between classes by being the only class that has detailed knowledge of their methods.
 
 ``` javascript
 class Mediator {
@@ -548,7 +551,7 @@ class Instance {
 
 #### Memento
 
-> Provides the ability to restore an object to its previous state. 
+> Provides the ability to restore an object to its previous state.
 
 ``` javascript
 class Memento {
@@ -615,7 +618,7 @@ class Observer {
 
 #### State
 
-> Allows an object to alter its behavior when its internal state changes. 
+> Allows an object to alter its behavior when its internal state changes.
 
 ``` javascript
 class State {
@@ -671,7 +674,7 @@ class Strategy {
 
 #### Template
 
-> Method defines the skeleton of an algorithm as an abstract class, allowing its subclasses to provide concrete behavior. 
+> Method defines the skeleton of an algorithm as an abstract class, allowing its subclasses to provide concrete behavior.
 
 ``` javascript
 class Template {
@@ -703,7 +706,7 @@ class Instance extends Template {
 
 #### Visitor
 
-> Separates an algorithm from an object structure by moving the hierarchy of methods into one object. 
+> Separates an algorithm from an object structure by moving the hierarchy of methods into one object.
 
 ``` javascript
 class Instance {
@@ -731,10 +734,11 @@ class Visitor {
 
 * Detailed explanation
 * Complex application cases
+
 ## Support
 
 Please star ⭐️ the repository to show your support!
 
- ## License
+## License
 
 [![License: CC BY-NC-ND 3.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%203.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/3.0/)
